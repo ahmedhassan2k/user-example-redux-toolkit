@@ -15,7 +15,7 @@ export const userSlice = createSlice({
       return [...state.filter(user => user.id !== action.payload)]
     },
     reset: (state) => {
-
+      state = initialState;
     }
   }
 
