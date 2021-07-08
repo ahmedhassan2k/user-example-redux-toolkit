@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addUser, deleteUser, selectUser } from './userSlice';
+import { addUser, deleteUser,reset, selectUser } from './userSlice';
 export const User = () => {
     let dispatch = useDispatch()
     let [name, setName] = useState('');
@@ -47,6 +47,8 @@ export const User = () => {
                     </div>
                 )
             })}
+            <button onClick={() => dispatch(reset()}>Remove</button><hr />
+
         </div>
     )
 }
